@@ -48,7 +48,7 @@ export class ReEnvisionDashboardAppComponent {
       icon: "assignment ind"
     },
     {
-      name: "Patient-Info",
+      name: "Patient-Demographics",
       description: "Component for viewing general patient information",
       icon: "face"
     },
