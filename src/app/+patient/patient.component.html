@@ -1,0 +1,21 @@
+<div class="form">
+  <md-card>
+    <md-card-subtitle>View patient related information</md-card-subtitle>
+    <md-card-title>Patient Component
+      <md-card-actions align="start">
+        <button (click)="changeComponentStatus('Demographics')" type="" md-raised-button color="primary">View Demographics</button>
+        <button (click)="changeComponentStatus('Appointments')" type="" md-raised-button color="primary">View Appointments</button>        
+        <button (click)="changeComponentStatus('Allergies')" type="" md-raised-button color="primary">View Allergies</button>
+        <button (click)="changeComponentStatus('Conditions')" type="" md-raised-button color="primary">View Conditions</button>
+        <button (click)="changeComponentStatus('Medications')" type="" md-raised-button color="primary">View Medications</button>
+      </md-card-actions>
+    </md-card-title>
+    <md-card-content>
+      <patient-demographics *ngIf="status == 0"></patient-demographics>
+    </md-card-content>
+    <md-card-actions align="end">
+      <button *ngIf="status == 0" type="" md-raised-button color="accent">Save Changes</button>
+      <button *ngIf="status == 0" type="" md-raised-button color="accent">Cancel Changes</button>
+    </md-card-actions>
+  </md-card>
+</div>

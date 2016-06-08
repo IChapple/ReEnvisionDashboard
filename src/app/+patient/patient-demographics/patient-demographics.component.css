@@ -1,0 +1,21 @@
+form {
+    display: flex;
+    box-shadow: 1px 1px 5px #aaa;
+    border: 1px solid #009688;
+}
+form > section {
+    padding:1em;
+}
+md-radio-button, md-checkbox {
+  margin: 16px 8px;
+}
+md-input {
+  margin: 8px 0;
+  width: 100%;
+}
+.md-input-group > md-input {
+    width: auto;
+}
+.md-input-duo > md-input {
+    width: 40%;
+}
