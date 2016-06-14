@@ -1,2 +1,3 @@
 export * from './environment';
-export * from './re-envision-dashboard.component';
+export * from './app.component';
+export * from './app.routes'

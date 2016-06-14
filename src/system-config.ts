@@ -64,7 +64,8 @@ const barrels: string[] = [
   'app/account/account-information',
   'app/account/account-phones',
   'app/account/account-texting',
-  'app/nav',
+  // 'app/nav',
+  'app/component-list',
   /** @cli-barrel */
 ];
 

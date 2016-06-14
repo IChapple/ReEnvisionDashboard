@@ -9,25 +9,25 @@ import {
 import { ComponentFixture, TestComponentBuilder } from '@angular/compiler/testing';
 import { Component } from '@angular/core';
 import { By } from '@angular/platform-browser';
-import { NavComponent } from './nav.component';
+import { ComponentListComponent } from './component-list.component';
 
-describe('Component: Nav', () => {
+describe('Component: ComponentList', () => {
   let builder: TestComponentBuilder;
 
-  beforeEachProviders(() => [NavComponent]);
+  beforeEachProviders(() => [ComponentListComponent]);
   beforeEach(inject([TestComponentBuilder], function (tcb: TestComponentBuilder) {
     builder = tcb;
   }));
 
-  it('should inject the component', inject([NavComponent],
-      (component: NavComponent) => {
+  it('should inject the component', inject([ComponentListComponent],
+      (component: ComponentListComponent) => {
     expect(component).toBeTruthy();
   }));
 
   it('should create the component', inject([], () => {
-    return builder.createAsync(NavComponentTestController)
+    return builder.createAsync(ComponentListComponentTestController)
       .then((fixture: ComponentFixture<any>) => {
-        let query = fixture.debugElement.query(By.directive(NavComponent));
+        let query = fixture.debugElement.query(By.directive(ComponentListComponent));
         expect(query).toBeTruthy();
         expect(query.componentInstance).toBeTruthy();
       });
@@ -37,10 +37,10 @@ describe('Component: Nav', () => {
 @Component({
   selector: 'test',
   template: `
-    <app-nav></app-nav>
+    <app-component-list></app-component-list>
   `,
-  directives: [NavComponent]
+  directives: [ComponentListComponent]
 })
-class NavComponentTestController {
+class ComponentListComponentTestController {
 }
 

@@ -9,7 +9,15 @@ import { MdRadioButton, MdRadioGroup, MdRadioDispatcher } from '@angular2-materi
 
 //local
 import { PatientDemographicsComponent } from './patient-demographics/patient-demographics.component';
-import { PatientComponentStatus } from './shared/index';
+// import { PatientComponentStatus } from './shared/index';
+
+enum PatientComponentStatus {
+    Demographics,
+    Appointments,
+    Allergies,
+    Conditions,
+    Medications
+}
 
 
 @Component({

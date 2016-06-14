@@ -5,18 +5,18 @@ import {
   it,
   inject
 } from '@angular/core/testing';
-import { ReEnvisionDashboardAppComponent } from '../app/re-envision-dashboard.component';
+import { AppComponent } from '../app/app.component';
 
-beforeEachProviders(() => [ReEnvisionDashboardAppComponent]);
+beforeEachProviders(() => [AppComponent]);
 
 describe('App: ReEnvisionDashboard', () => {
   it('should create the app',
-      inject([ReEnvisionDashboardAppComponent], (app: ReEnvisionDashboardAppComponent) => {
+      inject([AppComponent], (app: AppComponent) => {
     expect(app).toBeTruthy();
   }));
 
   it('should have as title \'re-envision-dashboard works!\'',
-      inject([ReEnvisionDashboardAppComponent], (app: ReEnvisionDashboardAppComponent) => {
+      inject([AppComponent], (app: AppComponent) => {
     expect(app.title).toEqual('re-envision-dashboard works!');
   }));
 });

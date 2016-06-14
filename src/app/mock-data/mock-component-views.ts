@@ -1,37 +1,6 @@
-//External
-import { Component } from '@angular/core';
+import { ComponentView } from '../models/component-view.model';
 
-//Material Components
-import { MdToolbar }              from '@angular2-material/toolbar';
-import { MD_SIDENAV_DIRECTIVES }  from '@angular2-material/sidenav';
-import { MD_LIST_DIRECTIVES }     from '@angular2-material/list';
-import { MD_CARD_DIRECTIVES }     from '@angular2-material/card';
-import { MdIcon, MdIconRegistry } from '@angular2-material/icon';
-
-//Local
-import { PatientComponent } from './+patient/patient.component';
-import { NavComponent, ComponentViews } from './shared';
-
-@Component({
-  moduleId: module.id,
-  selector: 're-envision-dashboard-app',
-  templateUrl: 're-envision-dashboard.component.html',
-  styleUrls: ['re-envision-dashboard.component.css'],
-  directives: [
-    MD_SIDENAV_DIRECTIVES,
-    MD_LIST_DIRECTIVES,
-    MD_CARD_DIRECTIVES,
-    MdToolbar,
-    MdIcon,
-    PatientComponent
-  ],
-  providers: [MdIconRegistry]
-})
-export class ReEnvisionDashboardAppComponent {
-  title = "Dox Re-Envision Dashboard";
-
-  //TODO: This object needs to get moved to another file and defined as a class
-  views:Object[] = [
+export var componentViews: ComponentView[] = [
     {
       name: "Account-Information",
       description: "Component for editing account information",
@@ -74,5 +43,4 @@ export class ReEnvisionDashboardAppComponent {
       description: "Component for viewing a list of patient Medications",
       icon: "face"
     }
-  ];
-}
+];

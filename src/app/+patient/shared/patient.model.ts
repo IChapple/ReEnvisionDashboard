@@ -18,15 +18,6 @@ export class Patient {
     race: Race; 
 }
 
-export enum PatientComponentStatus {
-    Demographics,
-    Appointments,
-    Allergies,
-    Conditions,
-    Medications
-}
-
-
 //TODO: These enums are private for now, should be placed in the main shared folder
 // and imported here at a later time
 enum Gender {
