@@ -1,6 +1,6 @@
 //External
-import { Component }          from '@angular/core';
-import { ROUTER_DIRECTIVES }  from '@angular/router';
+import { Component, OnInit }          from '@angular/core';
+import { ROUTER_DIRECTIVES }          from '@angular/router';
 
 //Material Components
 import { MdToolbar }              from '@angular2-material/toolbar';
@@ -11,10 +11,13 @@ import { MdIcon, MdIconRegistry } from '@angular2-material/icon';
 import { MdButton }               from '@angular2-material/button';
 
 //Local
-import { ComponentListComponent } from './component-list';
+import { ViewListComponent } from './view-list';
+import { ViewService } from './services/view.service';
 
-//Mock-Data
-import { componentViews } from './mock-data/mock-component-views';
+//Mock - Data
+import { Views } from './mock-data/mock-views';
+import { View } from './models/view.model';
+
 
 @Component({
   moduleId: module.id,
@@ -29,14 +32,24 @@ import { componentViews } from './mock-data/mock-component-views';
     MdToolbar,
     MdIcon,
     MdButton,
-    ComponentListComponent,
+    ViewListComponent,
   ],
-  providers: [MdIconRegistry]
+  providers: [MdIconRegistry, ViewService]
 })
-export class AppComponent {
-  constructor() { }
-
+export class AppComponent implements OnInit {
   title = "Dox Re-Envision Dashboard";
-  views = componentViews;
+  views: View[] = Views;
+
+  constructor(private viewService: ViewService) {
+    
+  }
+  
+  selectView(view: View) {
+    this.viewService.changeState(view);
+  }
+
+  ngOnInit() {
+    
+  }
 
 }

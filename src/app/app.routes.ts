@@ -1,6 +1,6 @@
 //File where routes will be defined
-import { ComponentListComponent } from './component-list/component-list.component';
+import { ViewListComponent } from './view-list/view-list.component';
 
 export var AppRoutes = [
-    { index: true, component: ComponentListComponent }
+    { index: true, component: ViewListComponent }
 ]

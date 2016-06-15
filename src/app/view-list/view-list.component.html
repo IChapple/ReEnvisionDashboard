@@ -1,0 +1,13 @@
+<md-grid-list [cols]="activeViews.length > 1 ? activeViews.length > 2 ? 3 : 2 : 1" rowHeight="4:3" gutterSize="5px">
+    <md-grid-tile *ngFor="let view of activeViews" [style.background]="view.color" [colspan]="view.cols" [rowspan]="view.rows">
+        <button md-icon-button class="close-button" (click)="closeView(view)">
+            <md-icon>close</md-icon>
+        </button>
+        
+        <!--<h3>{{view.name}}</h3>
+        <p>{{view.description}}</p>-->
+
+        <!--TODO: Eventually I would like to dynamically load in these components using the DynamicComponentLoader-->
+        <patient-component *ngIf="view.name == 'Patient-Demographics'"></patient-component>
+    </md-grid-tile>
+</md-grid-list>

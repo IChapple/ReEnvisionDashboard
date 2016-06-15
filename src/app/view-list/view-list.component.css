@@ -1,0 +1,12 @@
+md-grid-tile {
+    transition: all .5s;
+    display: block !important;
+}
+
+md-grid-tile .close-button {
+    position: absolute;
+    top:0;
+    right:0;
+    color:rgba(0,0,0,.3);
+    z-index: 999;
+}

@@ -5,13 +5,13 @@ import {
   expect,
   inject
 } from '@angular/core/testing';
-import { ComponentListService } from './component-list.service';
+import { ViewService } from './view.service';
 
 describe('ComponentList Service', () => {
-  beforeEachProviders(() => [ComponentListService]);
+  beforeEachProviders(() => [ViewService]);
 
   it('should ...',
-      inject([ComponentListService], (service: ComponentListService) => {
+      inject([ViewService], (service: ViewService) => {
     expect(service).toBeTruthy();
   }));
 });
